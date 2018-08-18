@@ -1,3 +1,7 @@
+$(function () {
+        $('.tlt').textillate();
+      })
+
 AOS.init();
 particlesJS("particles-js", {
     "particles": {

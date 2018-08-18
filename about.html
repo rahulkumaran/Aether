@@ -46,7 +46,14 @@
 </head>
 
 <body>
-    <h1 class="aboutHeading" data-aos="fade-up" data-aos-duration="3000">About Us</h1> 
+    <!--<h1 class="aboutHeading" data-aos="fade-up" data-aos-duration="3000">About Us</h1>  -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+            <h1 class="tlt aboutHeading" data-in-effect="rollIn">My Title</h1>       
+        </div>
+      </div>
+    </div>
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -249,9 +256,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/jquery.lettering.js"></script>
+  <script src="js/jquery.textillate.js"></script>
   <script src="js/custom.js"></script>
   <script>
-      (function($) {
+          (function($) {
   
         var $player = $('.player');
         
@@ -266,7 +275,39 @@
         });
         
       })(jQuery);
+      function autoType(elementClass, typingSpeed){
+        var thhis = $(elementClass);
+        thhis.css({
+          "position": "relative",
+          "display": "inline-block"
+        });
+        thhis.prepend('<div class="cursor" style="right: initial; left:0;"></div>');
+        thhis = thhis.find(".text-js");
+        var text = thhis.text().trim().split('');
+        var amntOfChars = text.length;
+        var newString = "";
+        thhis.text("|");
+        setTimeout(function(){
+          thhis.css("opacity",1);
+          thhis.prev().removeAttr("style");
+          thhis.text("");
+          for(var i = 0; i < amntOfChars; i++){
+            (function(i,char){
+              setTimeout(function() {        
+                newString += char;
+                thhis.text(newString);
+              },i*typingSpeed);
+            })(i+1,text[i]);
+          }
+        },1500);
+      }
       
+      $(document).ready(function(){
+        // Now to start autoTyping just call the autoType function with the 
+        // class of outer div
+        // The second paramter is the speed between each letter is typed.   
+        autoType(".type-js",200);
+      });
   </script>
 </body>
 
