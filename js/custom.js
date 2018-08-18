@@ -1,3 +1,4 @@
+AOS.init();
 particlesJS("particles-js", {
     "particles": {
         "number": {
@@ -109,14 +110,4 @@ particlesJS("particles-js", {
     "retina_detect": true
 });
 
-$(document).ready(function() {
-    $(".owl-carousel").owlCarousel({
-      items: 1,
-      singleItem: true,
-      itemsScaleUp: true,
-      slideSpeed: 500,
-      autoPlay: 2500,
-      stopOnHover: true,
-      autoPlay: true
-    });
-  });
+
