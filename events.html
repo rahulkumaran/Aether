@@ -9,30 +9,91 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
     crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
   <link rel="stylesheet" href="css/style.css">
 
   <title>Aether | Events</title>
 
   <style>
-    html{
+    body{
       background-image: linear-gradient(to top, #11305e, #12284d, #12213d, #111a2d, #0e121e);
+      height: 100%;
+      background-attachment: fixed;
     }
   </style>
 </head>
 
 <body>
-
-  <div class="container">
-
+  <section class="events">
+    <h1 class="tlt aboutHeading" data-in-effect="rollIn">Cultural Events</h1>   
+    <div class="container">
+      <div class="row">
+            <div class="example-1 card">
+                <div class="wrapper">
+                  <div class="date">
+                    <span class="day">12</span>
+                    <span class="month">Aug</span>
+                    <span class="year">2016</span>
+                  </div>
+                  <div class="data">
+                    <div class="content">
+                      <span class="author">Jane Doe</span>
+                      <h1 class="title"><a href="#">Event Name</a></h1>
+                      <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias at fuga dolores quibusdam ipsa facere cum quisquam est quam magnam tempora officia voluptas laboriosam, cumque vero modi earum dolor officiis!</p>
+                      <label for="show-menu" class="menu-button"><span></span></label>
+                    </div>
+                    <input type="checkbox" id="show-menu" />
+                    <ul class="menu-content">
+                      <li>
+                        <a href="#" class="fa fa-bookmark-o"></a>
+                      </li>
+                      <li><a href="#" class="fa fa-heart-o"><span>47</span></a></li>
+                      <li><a href="#" class="fa fa-comment-o"><span>8</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+            <div class="example-1 card">
+                <div class="wrapper">
+                  <div class="date">
+                    <span class="day">02</span>
+                    <span class="month">Nov</span>
+                    <span class="year">2018</span>
+                  </div>
+                  <div class="data">
+                    <div class="content">
+                      <span class="author">Organiser</span>
+                      <h1 class="title"><a href="#">Event Name</a></h1>
+                      <p class="text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident unde facilis quo? Sunt velit incidunt eveniet consectetur fugit dicta, quaerat repudiandae nulla odit, atque ea tempora, impedit magni commodi. Vitae.</p>
+                      <label for="show-menu" class="menu-button"><span></span></label>
+                    </div>
+                    <input type="checkbox" id="show-menu" />
+                    <ul class="menu-content">
+                      <li>
+                        <a href="#" class="fa fa-bookmark-o"></a>
+                      </li>
+                      <li><a href="#" class="fa fa-heart-o"><span>47</span></a></li>
+                      <li><a href="#" class="fa fa-comment-o"><span>8</span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              
+    </div>
+  </section>
   </div>
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
     crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/jquery.lettering.js"></script>
+  <script src="js/jquery.textillate.js"></script>
   <script src="js/custom.js"></script>
 </body>
 
