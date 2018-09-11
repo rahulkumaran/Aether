@@ -7,10 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous">
-  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> 
+  <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Advent+Pro" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 
   <title>Aether | Events</title>
@@ -25,6 +26,35 @@
 </head>
 
 <body>
+          <!--Nav bar-->
+          <nav class="navbar navbar-default navbar-fixed-top">
+              <div class="container">
+                  <!-- Brand and toggle get grouped for better mobile display -->
+                  <div class="navbar-header">
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#loso-navbar-collapse-1" aria-expanded="false">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                      <a class="navbar-brand" href="#">
+                          <img src="img/Aether.png">
+                      </a>
+                  </div>
+  
+                  <!-- Collect the nav links, forms, and other content for toggling -->
+                  <div class="collapse navbar-collapse" id="loso-navbar-collapse-1">
+                      <ul class="nav navbar-nav navbar-right">
+                          <li><a href="/" class="nav-item">Home</a></li>
+                          <li><a href="/events.html" class="nav-item">Events</a></li>
+                          <li><a href="/about.html" class="nav-item">About Us</a></li>                        
+                      </ul>
+  
+                  </div>
+                  <!-- /.navbar-collapse -->
+              </div>
+              <!-- /.container-fluid -->
+          </nav>
   <section class="events">
     <h1 class="tlt aboutHeading" data-in-effect="rollIn">Cultural Events</h1>
     <div class="container">
@@ -562,16 +592,56 @@
 
   </footer>
   </div>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="js/jquery.lettering.js"></script>
-  <script src="js/jquery.textillate.js"></script>
-  <script src="js/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/jquery.lettering.js"></script>
+    <script src="js/jquery.textillate.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+        $(document).ready(function(){
+          $(window).scroll(function () {
+            'use strict';
+            if ($(window).scrollTop() < 80) {
+                $('.navbar').css({
+                    'margin-top': '-100px',
+                    'opacity': '0'
+                });
+                $('.navbar-default').css({
+                    'background-color': 'rgba(59, 59 , 59, 0)'
+    
+                });
+    
+            } else {
+                $('.navbar').css({
+                    'margin-top': '0px',
+                    'opacity': '1'
+                });
+                $('.navbar-default').css({
+                    'background-color': 'rgba(59,59,59,0.7)',
+                    'border-color': '#444'
+                });
+                $('.navbar-brand img').css({
+                    'height': '35px',
+                    'padding-top': '0px'
+                });
+                $('.navbar-nav > li > a').css({
+                    'padding-top': '15px'
+    
+                });
+    
+    
+            }
+    
+        });
+        });
+    </script>
 </body>
 
 </html>
