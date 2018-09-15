@@ -641,3 +641,9 @@ navbar-default .navbar-nav > .active >a:focus{
 .nav-item{
   font-family: "Space Mono";
 }
+
+.overlay {
+  position: absolute;
+  padding-left: 40%;
+  padding-top: 20%;
+}
